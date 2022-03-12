@@ -1,31 +1,25 @@
-# Create the years and durations lists
+# Vou criar duas listas para montar meu dicionário:
 years = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
 durations = [103, 101, 99, 100, 100, 95, 95, 96, 93, 90]
 
-# Create a dictionary with the two lists
+# Agora, criando o dicionário:
 movie_dict = {'years': years, 'durations': durations}
 
-# Print the dictionary
-print(movie_dict)
-
-# Import pandas under its usual alias
+# Importando pandas:
 import pandas as pd
 
-# Create a DataFrame from the dictionary
+# Criando um DataFrame a partir do dicionário existente:
 durations_df = pd.DataFrame(movie_dict)
 
-# Print the DataFrame
-print(durations_df)
-
-# Import matplotlib.pyplot under its usual alias and create a figure
+# Importando a biblioteca para gerar o plot e criando a figura:
 import matplotlib.pyplot as plt
 fig = plt.figure()
 
-# Draw a line plot of release_years and durations
+# Criando um gráfico com os anos no eixo 'x' e a duração dos filmes no eixo 'y':
 plt.plot(durations_df['years'], durations_df['durations'])
 
-# Create a title
+# Criando um título:
 plt.title("Netflix Movie Durations 2011-2020")
 
-# Show the plot
+# Mostrando o gráfico:
 plt.show()
